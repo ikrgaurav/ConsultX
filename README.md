@@ -1,6 +1,6 @@
 ## ConsultX - Business Consultancy Website
 
-### [Demo Link](https://consultx.netlify.app/) 🔗
+### [Demo Link]() 🔗
 
 A simple and interactive website, built with **React JS**.
 
@@ -20,14 +20,6 @@ A simple and interactive website, built with **React JS**.
 - #### **React Swiper**
 - #### **SASS / SCSS**
 
-<br/>
-
-## Author:
-
-- **Gulshan Songara** - **[Portfolio Website](https://gulshansongara.netlify.app)**, **[Linkedin](https://www.linkedin.com/in/gulshan-songara/)**
-
-<br/>
-
 ## Available Scripts
 
 #### `npm start`
@@ -37,9 +29,3 @@ A simple and interactive website, built with **React JS**.
 #### `npm run build`
 
 #### `npm run eject`
-
-<br/>
-
-## License:
-
-This project is licensed under the  **GPL-3.0 License** - see the [LICENSE](LICENSE) file for details.
