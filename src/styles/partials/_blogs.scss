@@ -1,0 +1,28 @@
+.blogs_wrapper {
+    @include grid-cols(3, 1fr, 3rem);
+
+    @include devices(md) {
+        @include grid-cols(2, 1fr, 2rem);
+    }
+
+    @include devices(xs) {
+        @include grid-cols(1, 1fr, 2rem);
+    }
+}
+
+.blogs_img_wrap {
+
+    height: 240px;
+    
+    img {
+        @include img-fit;
+    }
+}
+
+.blogs_txt_wrap {
+    padding: 1.5rem;
+}
+
+.blogs_title {
+    font-size: 1.4rem;
+}

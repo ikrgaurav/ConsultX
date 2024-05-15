@@ -1,0 +1,36 @@
+.about_wrapper {
+    @extend .hero_wrapper;
+}
+
+.about_img_wrap {
+    @extend .hero_img_wrap;
+}
+
+.about_txt_wrap {
+    h2 {
+        color: var(--main-color);
+        line-height: 1.5;
+
+        span {
+            color: var(--main-color-2);
+        }
+    }
+
+    p {
+        margin-top: 1.2rem;
+    }
+}
+
+.about_numbs {
+    @include flexbox();
+    gap: 4rem;
+    @include margin-y(2rem, 2rem);
+    border-top: 1px solid var(--text-muted);
+    padding-top: 2rem;
+
+    h4 {
+        color: var(--main-color-2);
+        font-size: 1.8rem;
+        margin-bottom: 0.5rem;
+    }
+}

@@ -1,0 +1,145 @@
+.overflow_hide {
+    overflow: hidden;
+}
+
+.container {
+    max-width: 1320px;
+    @include mx-auto;
+    @include padding-x(0.75rem, 0.75rem);
+
+    @include devices(xl) {
+        max-width: 1140px;
+    }
+
+    @include devices(lg) {
+        max-width: 960px;
+    }
+
+    @include devices(md) {
+        max-width: 720px;
+    }
+
+    @include devices(sm) {
+        max-width: 540px;
+    }
+
+    @include devices(xs) {
+        width: 100%;
+    }
+}
+
+.wrapper {
+    display: grid;
+    margin-top: 2.2rem;
+}
+
+.section {
+    @include padding-y(5rem, 5rem);
+}
+
+.page_section {
+    @include devices(md) {
+        @include padding-y(3rem, 3rem);
+    }
+}
+
+.section_head {
+    @include flexbox(space-between, center);
+    flex-wrap: wrap;
+
+    .sub_heading {
+        color: var(--text-gray);
+        margin-top: 0.4rem;
+        font-weight: 500;
+    }
+}
+
+.page_head {
+    background-color: var(--main-color-4);
+    min-height: 30vh;
+    font-size: 1.2rem;
+    margin-bottom: 3rem;
+    @include centered;
+    @include padding-x(0.75rem, 0.75rem);
+}
+
+.btn {
+    display: inline-block;
+    background-color: var(--main-color-2);
+    color: #fff;
+    box-shadow: var(--box-shadow);
+    margin-top: 2rem;
+    padding: 0.8rem 1.5rem;
+    border-radius: 3px;
+    @include transition(transform, 0.2s);
+
+    &:hover {
+        transform: translateY(-1.5px);
+    }
+
+    &:active {
+        transform: translateY(0);
+    }
+}
+
+.link_btn {
+    display: inline-block;
+    color: var(--main-color-2);
+    margin-top: 1.4rem;
+    font-weight: 600;
+    opacity: 0.9;
+
+    &:hover {
+        opacity: 1;
+    }
+}
+
+.card {
+    box-shadow: var(--box-shadow);
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.card_title {
+    font-family: var(--main-font-2);
+    color: var(--main-color-2);
+    @include margin-y(1rem, 1rem);
+}
+
+.input_field {
+    display: block;
+    width: 100%;
+    padding: 0.65rem 0.55rem;
+    font-size: 1rem;
+    border-radius: 2px;
+    border: 1px solid rgba($color: #000000, $alpha: 0.2);
+
+    &:focus {
+        border-color: rgba($color: #000000, $alpha: 0.5);
+    }
+}
+
+.badge {
+    display: inline-block;
+    background-color: var(--main-color-2);
+    color: #eee;
+    @include dimension(3rem, 3rem);
+    @include centered;
+    line-height: 1;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.swiper {
+    @include padding-y(2.2rem !important, 3rem !important);
+    user-select: none;
+}
+
+.swiper-pagination {
+    bottom: 0 !important;
+}
+
+.swiper-pagination-bullet-active {
+    background: var(--main-color-2) !important;
+    transform: scale(1.08);
+}

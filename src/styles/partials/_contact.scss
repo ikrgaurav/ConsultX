@@ -1,0 +1,62 @@
+.contact_wrapper {
+    grid-template-columns: 1fr 1.8fr;
+    gap: 5rem;
+
+    @include devices(md) {
+        grid-template-columns: 1fr;
+    }
+}
+
+.contact_actions_list {
+    margin-top: 2.5rem;
+    @include flexbox();
+    flex-direction: column;
+    gap: 2rem;
+
+    li {
+        @include flexbox();
+        gap: 1.5rem;
+    }
+}
+
+.contact_actions_icon {
+    font-size: 1.3rem;
+}
+
+.contact_actions_info {
+    h4 {
+        margin-bottom: 0.4rem;
+    }
+
+    p {
+        font-size: 1.1rem;
+    }
+}
+
+.contact_form {
+
+    form {
+        @include flexbox();
+        flex-direction: column;
+        gap: 1.2rem;
+
+        .input_group {
+            width: 100%;
+            @include flexbox();
+            gap: 1rem;
+
+            @include devices(xs) {
+                flex-direction: column;
+            }
+        }
+
+        .input_box {
+            width: 100%;
+        }
+
+        .contact_btn {
+            margin-top: 1rem;
+        }
+    }
+
+}

@@ -1,0 +1,25 @@
+.features_wrapper {
+    @include grid-cols(4, 1fr, 2.2rem);
+
+    @include devices(md) {
+        @include grid-cols(2, 1fr, 2.2rem);
+    }
+
+    @include devices(xs) {
+        @include grid-cols(1, 1fr, 2.2rem);
+    }
+}
+
+.features_card {
+    padding: 1.5rem;
+}
+
+.features_icon {
+    svg {
+        @include dimension(45%, 45%);
+    }
+}
+
+.features_title {
+    font-size: 1.3rem;
+}

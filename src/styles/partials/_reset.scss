@@ -1,0 +1,71 @@
+::-moz-selection {
+    background-color: var(--main-color-2);
+    color: #fff;
+}
+
+::selection {
+    background-color: var(--main-color-2);
+    color: #fff;
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+
+    @include devices(xs) {
+        font-size: 15px;
+    }
+}
+
+body {
+    font-family: var(--main-font);
+}
+
+section {
+    position: relative;
+    overflow: hidden;
+}
+
+input,
+button,
+textarea {
+    border: none;
+    outline: none;
+    font-size: inherit;
+    font-family: inherit;
+}
+
+button {
+    background: none;
+    cursor: pointer;
+}
+
+textarea {
+    resize: vertical;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+img,
+svg {
+    vertical-align: middle;
+}

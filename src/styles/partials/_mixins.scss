@@ -1,0 +1,100 @@
+@mixin dimension($width: auto, $height: auto) {
+    width: $width;
+    height: $height;
+}
+
+@mixin mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@mixin margin-x($marginLeft, $marginRight) {
+    margin-left: $marginLeft;
+    margin-right: $marginRight;
+}
+
+@mixin margin-y($marginTop, $marginBottom) {
+    margin-top: $marginTop;
+    margin-bottom: $marginBottom;
+}
+
+@mixin padding-x($paddingLeft, $paddingRight) {
+    padding-left: $paddingLeft;
+    padding-right: $paddingRight;
+}
+
+@mixin padding-y($paddingTop, $paddingBottom) {
+    padding-top: $paddingTop;
+    padding-bottom: $paddingBottom;
+}
+
+@mixin img-fit {
+    @include dimension(100%, 100%);
+    object-fit: cover;
+}
+
+@mixin bg-cover {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+@mixin centered {
+    display: grid;
+    place-items: center;
+}
+
+@mixin grid-cols($colsCount, $colsWidth, $gap) {
+    grid-template-columns: repeat($colsCount, $colsWidth);
+    gap: $gap;
+}
+
+@mixin flexbox($justifyContent: flex-start, $alignItems: flex-start) {
+    display: flex;
+    justify-content: $justifyContent;
+    align-items: $alignItems;
+}
+
+@mixin bordered($borderWidth, $borderStyle, $borderColor) {
+    border: $borderWidth $borderStyle $borderColor;
+}
+
+@mixin transition($prop: all, $duration, $timingFn: ease) {
+    transition: $prop $duration $timingFn;
+}
+
+
+// mixin for media-queries
+
+@mixin devices($breakpoint) {
+
+    @if $breakpoint==xl {
+        @media (max-width: 1399.98px) {
+            @content;
+        }
+    }
+
+    @else if $breakpoint==lg {
+        @media (max-width: 1199.98px) {
+            @content;
+        }
+    }
+
+    @else if $breakpoint==md {
+        @media (max-width: 991.98px) {
+            @content;
+        }
+    }
+
+    @else if $breakpoint==sm {
+        @media (max-width: 767.98px) {
+            @content;
+        }
+    }
+
+    @else if $breakpoint==xs {
+        @media (max-width: 575.98px) {
+            @content;
+        }
+    }
+}

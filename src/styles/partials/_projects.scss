@@ -1,0 +1,41 @@
+.projects_wrapper {
+    @include grid-cols(3, 1fr, 2rem);
+
+    @include devices(md) {
+        @include grid-cols(2, 1fr, 2rem);
+    }
+
+    @include devices(xs) {
+        @include grid-cols(1, 1fr, 2rem);
+    }
+}
+
+.projects_card {
+    position: relative;
+}
+
+.projects_img_wrap {
+
+    img {
+        @include img-fit;
+    }
+}
+
+.projects_txt_wrap {
+    background-color: rgba(76, 87, 213, 0.839);
+    color: #eee;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem;
+    @include flexbox(space-between, center);
+    transform: translateY(100%);
+    @include transition(transform, 0.3s);
+}
+
+.projects_card:hover {
+    .projects_txt_wrap {
+        transform: translateY(0);
+    }
+}

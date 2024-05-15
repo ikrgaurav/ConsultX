@@ -1,0 +1,28 @@
+#services {
+    background-color: var(--main-color-4);
+}
+
+.services_wrapper {
+    @include grid-cols(3, 1fr, 2rem);
+
+    @include devices(md) {
+        @include grid-cols(2, 1fr, 2rem);
+    }
+
+    @include devices(xs) {
+        @include grid-cols(1, 1fr, 2rem);
+    }
+}
+
+.services_card {
+    background-color: #fff;
+    padding: 1.8rem;
+}
+
+.services_icon {
+    @include dimension(3.75rem, 3.75rem);
+
+    svg {
+        @include dimension(50%, 50%);
+    }
+}
