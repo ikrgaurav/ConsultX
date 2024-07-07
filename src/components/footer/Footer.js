@@ -96,7 +96,7 @@ const Footer = () => {
 
               <div>
                 <p>
-                  Designed & Built by | <a href="https://gulshansongara.netlify.app/" target="_blank" rel="noopener noreferrer">Gulshan Songara</a>
+                  Designed & Built by | <a href="https://linkedin.com/in/krgm" target="_blank" rel="noopener noreferrer">Kumar Gaurav Madhurj</a>
                 </p>
               </div>
             </div>
